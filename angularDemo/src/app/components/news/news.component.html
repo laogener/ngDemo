@@ -1,0 +1,17 @@
+<app-header></app-header>
+<h2>这是一个新闻组件</h2>
+{{title}}
+<br/>
+{{msg}}
+<br/>
+{{msg1}}
+<br/>
+{{userName}}
+<p id="{{id}}">绑定一个属性--打开控制台查看</p>
+<p [title]="msg">鼠标hover查看</p>
+<p [innerHtml] = 'h'></p>
+<p>*ngFor</p>
+<ul>
+  <li *ngFor="let item of list;let i = index">{{i}}--{{item}}</li>
+</ul>
+

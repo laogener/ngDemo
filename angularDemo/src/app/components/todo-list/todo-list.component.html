@@ -1,0 +1,9 @@
+<p>
+  <input type="text" [(ngModel)] = 'userNmae'> <button (click)="addData()">增加</button>
+</p>
+<ul>
+  <li *ngFor="let item of list;let i = index">
+    {{item}}
+    ---------<a href="javascript:;" (click)="delData(i)">删除</a>
+  </li>
+</ul>
