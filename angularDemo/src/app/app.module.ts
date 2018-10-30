@@ -20,11 +20,19 @@ import { ChildComponent } from './components/child/child.component';
 import { Child2Component } from './components/child2/child2.component';
 import { Child3Component } from './components/child3/child3.component';
 import { Child4Component } from './components/child4/child4.component';
+import { Route1Component } from './components/route1/route1.component';
+import { Route2Component } from './components/route2/route2.component';
+import { Route3Component } from './components/route3/route3.component';
+import { Route4Component } from './components/route4/route4.component';
+import { Route5Component } from './components/route5/route5.component';
+import { Route5ChildRoute1Component } from './components/route5-child-route1/route5-child-route1.component';
+import { Route5ChildRoute2Component } from './components/route5-child-route2/route5-child-route2.component';
+import { Route5ChildRoute3Component } from './components/route5-child-route3/route5-child-route3.component';
 
 //@NgModule装饰器将AppModule标记为Angular模块类（也叫NgModule类）。@NgModule接收一个元数据对象，告诉Angular如何编译和启动应用。
 @NgModule({
   declarations: [//引入当前项目运行的组件，自定义组件都需要在这里引入
-    AppComponent, HeaderComponent, NewsComponent, HomeComponent, TodoListComponent, HttpComponent, FatherComponent, ChildComponent, Child2Component, Child3Component, Child4Component
+    AppComponent, HeaderComponent, NewsComponent, HomeComponent, TodoListComponent, HttpComponent, FatherComponent, ChildComponent, Child2Component, Child3Component, Child4Component, Route1Component, Route2Component, Route3Component, Route4Component, Route5Component, Route5ChildRoute1Component, Route5ChildRoute2Component, Route5ChildRoute3Component
   ],
   imports: [//当前项目依赖那些模块
     BrowserModule,
