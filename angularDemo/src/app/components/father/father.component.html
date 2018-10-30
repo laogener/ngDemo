@@ -1,0 +1,13 @@
+<p>
+  father 组件! ---- {{msg}}
+</p>
+<app-child [msg]="msg" [name]="name"></app-child>
+<app-child2 [run]="run" [getDataFromChild]="getDataFromChild"></app-child2>
+<app-child3 (toParent) = 'requestData($event)'></app-child3>
+<br>
+<br>
+<br>
+<p>父组件通过@ViewChild获取子组件的数据和方法</p>
+<button (click)="child4.run()">父组件调用子组件方法</button>
+<button (click)="getChildData()">父组件调用自己方法获取子组件数据</button>
+<app-child4 #child4></app-child4>
