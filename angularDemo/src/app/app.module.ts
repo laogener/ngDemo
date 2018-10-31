@@ -28,6 +28,14 @@ import { Route5Component } from './components/route5/route5.component';
 import { Route5ChildRoute1Component } from './components/route5-child-route1/route5-child-route1.component';
 import { Route5ChildRoute2Component } from './components/route5-child-route2/route5-child-route2.component';
 import { Route5ChildRoute3Component } from './components/route5-child-route3/route5-child-route3.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
+// ngx-quill富文本框
+import { QuillModule } from 'ngx-quill';
+
+registerLocaleData(zh);
 
 //@NgModule装饰器将AppModule标记为Angular模块类（也叫NgModule类）。@NgModule接收一个元数据对象，告诉Angular如何编译和启动应用。
 @NgModule({
@@ -43,9 +51,12 @@ import { Route5ChildRoute3Component } from './components/route5-child-route3/rou
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    BrowserAnimationsModule,
+    NgZorroAntdModule,
+    QuillModule
   ],
-  providers: [StorageService],//定义的服务
+  providers: [StorageService, { provide: NZ_I18N, useValue: zh_CN }],//定义的服务
   bootstrap: [AppComponent]//默认启动哪个组件
 })
 export class AppModule { }
