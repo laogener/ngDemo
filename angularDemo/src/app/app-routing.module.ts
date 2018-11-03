@@ -28,12 +28,12 @@ const routes: Routes = [
   // 动态路由
   {path:'route4/:id',component:Route4Component},
   // 默认路由
-  { path: '', redirectTo: 'route1', pathMatch: 'full' },
+  // { path: '', redirectTo: 'route1', pathMatch: 'full' },
   // 匹配不到路由
-  { path: '**',
-    // component: Route1Component
-    redirectTo:'route1'
-  },
+  // { path: '**',
+  //   // component: Route1Component
+  //   redirectTo:'route1'
+  // },
 ];
 
 @NgModule({

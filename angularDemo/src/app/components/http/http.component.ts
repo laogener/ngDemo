@@ -18,8 +18,7 @@ export class HttpComponent implements OnInit {
     this.requestData();
   }
   requestData(){
-    this.http.get('https://api.douban.com/v2/movie/in_theaters?city=广州&start=0&count=10')
-      // .map(res =>res.json())//返回的数据转json
+    this.http.get('http://jsonplaceholder.typicode.com/users/users')
       .subscribe(function(data){
       console.log(data)
     },function(err){

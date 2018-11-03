@@ -48,7 +48,6 @@ registerLocaleData(zh);
     HttpClientModule,
     HttpClientJsonpModule,
     FormsModule,
-    HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),

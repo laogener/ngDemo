@@ -10,3 +10,6 @@ ng generate module app-routing --flat --module=app
 --flat放入文件src/app而不是自己的文件夹。  
 --module=app告诉CLI将其注册到imports数组中AppModule。  
 
+7.不需要配置代理，直接写全路径就可以：  
+this.http.get('http://jsonplaceholder.typicode.com/users/users')  
+
