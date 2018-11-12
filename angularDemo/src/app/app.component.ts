@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {//数据
   title = 'angularDemo';
+  greeting:string = 'Hello';
+  user:{name:string} = {name:'Tom'};
 }

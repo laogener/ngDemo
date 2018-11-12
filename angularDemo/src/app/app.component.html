@@ -3,7 +3,7 @@
 <!--<app-news></app-news>-->
 <!--<app-home></app-home>-->
 <!--<app-todo-list></app-todo-list>-->
-<app-http></app-http>
+<!--<app-http></app-http>-->
 <!--<app-father></app-father>-->
 
 
@@ -22,3 +22,12 @@
 
 <!--<p>ngx-quill富文本框</p>-->
 <!--<quill-editor></quill-editor>-->
+<!--<p>生命周期钩子</p>-->
+<!--<app-life [name]="title"></app-life>-->
+<p>生命周期钩子---ngOnChanges</p>
+<div>
+  <h2>我是父组件</h2>
+  <div>问候语：<input type="text" [(ngModel)] = 'greeting'></div>
+  <div>姓名：<input type="text" [(ngModel)] = 'user.name'></div>
+  <app-changes [greeting] = 'greeting' [user] = 'user'></app-changes>
+</div>

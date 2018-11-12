@@ -34,13 +34,15 @@ import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 // ngx-quill富文本框
 import { QuillModule } from 'ngx-quill';
+import { LifeComponent } from './components/life/life.component';
+import { ChangesComponent } from './components/changes/changes.component';
 
 registerLocaleData(zh);
 
 //@NgModule装饰器将AppModule标记为Angular模块类（也叫NgModule类）。@NgModule接收一个元数据对象，告诉Angular如何编译和启动应用。
 @NgModule({
   declarations: [//引入当前项目运行的组件，自定义组件都需要在这里引入
-    AppComponent, HeaderComponent, NewsComponent, HomeComponent, TodoListComponent, HttpComponent, FatherComponent, ChildComponent, Child2Component, Child3Component, Child4Component, Route1Component, Route2Component, Route3Component, Route4Component, Route5Component, Route5ChildRoute1Component, Route5ChildRoute2Component, Route5ChildRoute3Component
+    AppComponent, HeaderComponent, NewsComponent, HomeComponent, TodoListComponent, HttpComponent, FatherComponent, ChildComponent, Child2Component, Child3Component, Child4Component, Route1Component, Route2Component, Route3Component, Route4Component, Route5Component, Route5ChildRoute1Component, Route5ChildRoute2Component, Route5ChildRoute3Component, LifeComponent, ChangesComponent
   ],
   imports: [//当前项目依赖那些模块
     BrowserModule,
