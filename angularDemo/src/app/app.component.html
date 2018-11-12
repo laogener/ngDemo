@@ -24,10 +24,29 @@
 <!--<quill-editor></quill-editor>-->
 <!--<p>生命周期钩子</p>-->
 <!--<app-life [name]="title"></app-life>-->
-<p>生命周期钩子---ngOnChanges</p>
-<div>
-  <h2>我是父组件</h2>
-  <div>问候语：<input type="text" [(ngModel)] = 'greeting'></div>
-  <div>姓名：<input type="text" [(ngModel)] = 'user.name'></div>
-  <app-changes [greeting] = 'greeting' [user] = 'user'></app-changes>
-</div>
+
+<!--<p>生命周期钩子-&#45;&#45;ngOnChanges</p>-->
+<!--<div>-->
+  <!--<h2>我是父组件</h2>-->
+  <!--<div>问候语：<input type="text" [(ngModel)] = 'greeting'></div>-->
+  <!--<div>姓名：<input type="text" [(ngModel)] = 'user.name'></div>-->
+  <!--<app-changes [greeting] = 'greeting' [user] = 'user'></app-changes>-->
+<!--</div>-->
+
+<!--<p>view钩子-&#45;&#45;父组件调用子组件方法AfterViewInit,AfterViewChecked </p>-->
+<!--<app-viewhook #child1></app-viewhook>-->
+<!--<app-viewhook #child2></app-viewhook>-->
+<!--<button (click)="child2.greeting('Jack')">调用child2的greeting方法&#45;&#45;{{message}}</button>-->
+
+<!--<p>ng-content父组件投影到子组件，innerHtml绑定html代码到页面</p>-->
+<!--<div class="wrapper">-->
+  <!--<h2>我是父组件</h2>-->
+  <!--<div>这个div定义在父组件中</div>-->
+  <!--<app-viewhook2>-->
+    <!--<div class="header">这是页头，这个div是父组件投影到子组件的,title是{{title}}</div>-->
+    <!--<div class="footer">这是页脚，这个div是父组件投影到子组件的</div>-->
+  <!--</app-viewhook2>-->
+<!--</div>-->
+<!--<div [innerHtml]="divContent"></div>-->
+
+<p>表单</p>
