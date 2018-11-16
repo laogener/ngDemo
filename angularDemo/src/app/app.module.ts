@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';//解析的模块
 import { NgModule } from '@angular/core';//核心模块
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,13 +38,18 @@ import { LifeComponent } from './components/life/life.component';
 import { ChangesComponent } from './components/changes/changes.component';
 import { ViewhookComponent } from './components/viewhook/viewhook.component';
 import { Viewhook2Component } from './components/viewhook2/viewhook2.component';
+import { TemplateFormComponent } from './components/template-form/template-form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { ReactiveRegistComponent } from './components/reactive-regist/reactive-regist.component';
+import { MobileValidatorDirective } from './directives/mobile-validator.directive';
+import { EqualValidatorDirective } from './directives/equal-validator.directive';
 
 registerLocaleData(zh);
 
 //@NgModule装饰器将AppModule标记为Angular模块类（也叫NgModule类）。@NgModule接收一个元数据对象，告诉Angular如何编译和启动应用。
 @NgModule({
   declarations: [//引入当前项目运行的组件，自定义组件都需要在这里引入
-    AppComponent, HeaderComponent, NewsComponent, HomeComponent, TodoListComponent, HttpComponent, FatherComponent, ChildComponent, Child2Component, Child3Component, Child4Component, Route1Component, Route2Component, Route3Component, Route4Component, Route5Component, Route5ChildRoute1Component, Route5ChildRoute2Component, Route5ChildRoute3Component, LifeComponent, ChangesComponent, ViewhookComponent, Viewhook2Component
+    AppComponent, HeaderComponent, NewsComponent, HomeComponent, TodoListComponent, HttpComponent, FatherComponent, ChildComponent, Child2Component, Child3Component, Child4Component, Route1Component, Route2Component, Route3Component, Route4Component, Route5Component, Route5ChildRoute1Component, Route5ChildRoute2Component, Route5ChildRoute3Component, LifeComponent, ChangesComponent, ViewhookComponent, Viewhook2Component, TemplateFormComponent, ReactiveFormComponent, ReactiveRegistComponent, MobileValidatorDirective, EqualValidatorDirective
   ],
   imports: [//当前项目依赖那些模块
     BrowserModule,
@@ -52,6 +57,7 @@ registerLocaleData(zh);
     HttpClientModule,
     HttpClientJsonpModule,
     FormsModule,
+    ReactiveFormsModule ,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),

@@ -11,8 +11,9 @@ import { ViewhookComponent } from './components/viewhook/viewhook.component';
 })
 // ***********app-viewhook*********
 // export class AppComponent implements OnInit,AfterViewInit,AfterViewChecked {
-
-export class AppComponent implements AfterViewInit ,AfterContentInit,AfterContentChecked{
+// ***********app-viewhook2*********
+// export class AppComponent implements AfterViewInit ,AfterContentInit,AfterContentChecked{
+export class AppComponent {
   title = 'angularDemo';
   greeting:string = 'Hello';
   user:{name:string} = {name:'Tom'};
@@ -39,13 +40,17 @@ export class AppComponent implements AfterViewInit ,AfterContentInit,AfterConten
   // }
   // ***********app-viewhook*********
 
-  ngAfterContentInit(){
-    console.log('父组件投影内容初始化完毕')
-  }
-  ngAfterContentChecked(){
-    console.log('父组件投影内容变更检测完毕')
-  }
-  ngAfterViewInit(){
-    console.log('父组件视图内容初始化完毕')
-  }
+
+  // ***********app-viewhook2*********
+
+  // ngAfterContentInit(){
+  //   console.log('父组件投影内容初始化完毕')
+  // }
+  // ngAfterContentChecked(){
+  //   console.log('父组件投影内容变更检测完毕')
+  // }
+  // ngAfterViewInit(){
+  //   console.log('父组件视图内容初始化完毕')
+  // }
+  // ***********app-viewhook2*********
 }
