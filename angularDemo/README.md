@@ -13,4 +13,14 @@ ng generate module app-routing --flat --module=app
 
 8.不需要配置代理，直接写全路径就可以：  
 this.http.get('http://jsonplaceholder.typicode.com/users/users')  
+9.typescript语言开发服务器，引入typescript类型定义文件： npm i @types/node --save
+10.配置代理：
+第一步：创建proxy.conf.json文件  
+第二步：package.json文件 -->  "start": "ng serve --proxy-config proxy.conf.json"  
+第三步：url前加'/api'   
+11.node服务器启动：node  路径/文件名 
+12.Angular6 http 结合rxjs 向后台请求数据在文件product.component.ts内;设置请求头  
+13.websocket服务：auction_server.js;web-socket.component.ts两个文件  
+
+
 

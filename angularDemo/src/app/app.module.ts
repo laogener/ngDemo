@@ -13,7 +13,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';/
 import { StorageService } from './services/storage.service';
 import { HttpComponent } from './components/http/http.component';//引入服务
 import { HttpClientModule,HttpClientJsonpModule }    from '@angular/common/http';//引入http模块
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { FatherComponent } from './components/father/father.component';
 import { ChildComponent } from './components/child/child.component';
@@ -43,13 +43,16 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
 import { ReactiveRegistComponent } from './components/reactive-regist/reactive-regist.component';
 import { MobileValidatorDirective } from './directives/mobile-validator.directive';
 import { EqualValidatorDirective } from './directives/equal-validator.directive';
+import { ProductComponent } from './components/product/product.component';
+import { WebSocketComponent } from './components/web-socket/web-socket.component';
+import {WebSocketService} from "./shared/web-socket.service";
 
 registerLocaleData(zh);
 
 //@NgModule装饰器将AppModule标记为Angular模块类（也叫NgModule类）。@NgModule接收一个元数据对象，告诉Angular如何编译和启动应用。
 @NgModule({
   declarations: [//引入当前项目运行的组件，自定义组件都需要在这里引入
-    AppComponent, HeaderComponent, NewsComponent, HomeComponent, TodoListComponent, HttpComponent, FatherComponent, ChildComponent, Child2Component, Child3Component, Child4Component, Route1Component, Route2Component, Route3Component, Route4Component, Route5Component, Route5ChildRoute1Component, Route5ChildRoute2Component, Route5ChildRoute3Component, LifeComponent, ChangesComponent, ViewhookComponent, Viewhook2Component, TemplateFormComponent, ReactiveFormComponent, ReactiveRegistComponent, MobileValidatorDirective, EqualValidatorDirective
+    AppComponent, HeaderComponent, NewsComponent, HomeComponent, TodoListComponent, HttpComponent, FatherComponent, ChildComponent, Child2Component, Child3Component, Child4Component, Route1Component, Route2Component, Route3Component, Route4Component, Route5Component, Route5ChildRoute1Component, Route5ChildRoute2Component, Route5ChildRoute3Component, LifeComponent, ChangesComponent, ViewhookComponent, Viewhook2Component, TemplateFormComponent, ReactiveFormComponent, ReactiveRegistComponent, MobileValidatorDirective, EqualValidatorDirective, ProductComponent, WebSocketComponent
   ],
   imports: [//当前项目依赖那些模块
     BrowserModule,
@@ -58,14 +61,14 @@ registerLocaleData(zh);
     HttpClientJsonpModule,
     FormsModule,
     ReactiveFormsModule ,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // ),
     BrowserAnimationsModule,
     NgZorroAntdModule,
     QuillModule
   ],
-  providers: [StorageService, { provide: NZ_I18N, useValue: zh_CN }],//定义的服务
+  providers: [StorageService,WebSocketService, { provide: NZ_I18N, useValue: zh_CN }],//定义的服务
   bootstrap: [AppComponent]//默认启动哪个组件
 })
 export class AppModule { }

@@ -1,0 +1,5 @@
+<div>商品信息</div>
+<ul>
+  <!--<li *ngFor="let product of products">{{product.name}}-&#45;&#45;{{product.id}}</li>-->
+  <li *ngFor="let product of products | async">{{product.name}}---{{product.id}}</li>
+</ul>
