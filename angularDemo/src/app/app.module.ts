@@ -30,7 +30,7 @@ import { Route5ChildRoute2Component } from './components/route5-child-route2/rou
 import { Route5ChildRoute3Component } from './components/route5-child-route3/route5-child-route3.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
-import { registerLocaleData } from '@angular/common';
+import {HashLocationStrategy, LocationStrategy, registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 // ngx-quill富文本框
 import { QuillModule } from 'ngx-quill';
@@ -68,7 +68,7 @@ registerLocaleData(zh);
     NgZorroAntdModule,
     QuillModule
   ],
-  providers: [StorageService,WebSocketService, { provide: NZ_I18N, useValue: zh_CN }],//定义的服务
+  providers: [StorageService,WebSocketService, { provide: NZ_I18N, useValue: zh_CN },{provide:LocationStrategy,useClass:HashLocationStrategy}],//定义的服务
   bootstrap: [AppComponent]//默认启动哪个组件
 })
 export class AppModule { }

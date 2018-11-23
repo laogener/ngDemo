@@ -1,6 +1,10 @@
 var express = require('express');
 
 var Server = require('ws').Server;
+
+// 文件路径模块
+var path = require('path');
+
 var app = express();
 var arr = [
     {'name':'product1',id:1},
@@ -8,9 +12,16 @@ var arr = [
     {'name':'product3',id:3},
     {'name':'product4',id:4}
 ];
-app.get('/',(req,res) => {
-    res.send('Hello Express');
-});
+
+// 代码部署到服务器前
+// app.get('/',(req,res) => {
+//     res.send('Hello Express');
+// });
+
+// 代码部署到服务器后
+app.use('/',express.static(path.join(__dirname,'..','client')));
+
+
 app.get('/api/products',(req,res) => {
     // res.send('接收到商品查询请求!')
     res.json(arr);

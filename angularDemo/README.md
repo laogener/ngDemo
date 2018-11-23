@@ -19,8 +19,16 @@ this.http.get('http://jsonplaceholder.typicode.com/users/users')
 第二步：package.json文件 -->  "start": "ng serve --proxy-config proxy.conf.json"  
 第三步：url前加'/api'   
 11.node服务器启动：node  路径/文件名 
-12.Angular6 http 结合rxjs 向后台请求数据在文件product.component.ts内;设置请求头  
-13.websocket服务：auction_server.js;web-socket.component.ts两个文件  
+12.nodemon 用来监视node.js应用程序中的任何更改并自动重启服务,非常适合用在开发环境中。
+13.Angular6 http 结合rxjs 向后台请求数据在文件product.component.ts内;设置请求头  
+14.websocket服务：auction_server.js;web-socket.component.ts两个文件  
+15.ng build   将Angular应用程序编译到给定输出路径中名为dist /的输出目录中   
+16.部署代码：  
+第一步：app.module.ts 的providers里面添加{provide:LocationStrategy,useClass:HashLocationStrategy}，用于从浏览器 URL           中读取路由状态  
+第二步：ng build打包代码  
+第三步：在服务器创建一个文件夹（client），包打包后的代码放入其中  
+第四步：在服务端代码文件(auction_server.js)中配置默认打开文件的路径  
+17.多环境（生产、开发、测试）:配置呢绒在angular.json，environments文件夹，main.ts三个地方；environment.ts里面有详细说明  
 
 
 
